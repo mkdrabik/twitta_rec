@@ -16,7 +16,7 @@ struct ContentView: View {
           Tweet(authorName: "Mason Drabik",
                 authorUsername: "m_drabik",
                 timestampText: "4h",
-                text: "Finally done.",
+                text: "Finally done. Maybe",
                 numberOfReplies: 2,
                 numberOfRetweets: 0,
                 numberOfLikes: 0, pfp: "mason"),
@@ -76,10 +76,10 @@ struct ContentView: View {
                 SearchView(cs: $cs).tabItem {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
-                Text("Tab Content 1").tabItem {
+                NotificationsView(cs: $cs).tabItem {
                     Image(systemName: "bell")
                 }.tag(2)
-                Text("Tab Content 1").tabItem {
+                DMView(cs: $cs).tabItem {
                     Image(systemName: "envelope")
                 }.tag(3)
             }
