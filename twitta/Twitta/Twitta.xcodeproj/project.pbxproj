@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B237D4A2B0C5C3E0015DED0 /* Twitter_RecreationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B237D492B0C5C3E0015DED0 /* Twitter_RecreationApp.swift */; };
-		3B237D4C2B0C5C3E0015DED0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B237D4B2B0C5C3E0015DED0 /* ContentView.swift */; };
-		3B237D4E2B0C5C3F0015DED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B237D4D2B0C5C3F0015DED0 /* Assets.xcassets */; };
-		3B237D512B0C5C3F0015DED0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B237D502B0C5C3F0015DED0 /* Preview Assets.xcassets */; };
+		3B9A84932B15B07F001E3FC3 /* TwittaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A84922B15B07F001E3FC3 /* TwittaApp.swift */; };
+		3B9A84952B15B07F001E3FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A84942B15B07F001E3FC3 /* ContentView.swift */; };
+		3B9A84972B15B07F001E3FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A84962B15B07F001E3FC3 /* Assets.xcassets */; };
+		3B9A849A2B15B07F001E3FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A84992B15B07F001E3FC3 /* Preview Assets.xcassets */; };
+		3B9A84A12B15B0AC001E3FC3 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A84A02B15B0AC001E3FC3 /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B237D462B0C5C3E0015DED0 /* Twitter Recreation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter Recreation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B237D492B0C5C3E0015DED0 /* Twitter_RecreationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter_RecreationApp.swift; sourceTree = "<group>"; };
-		3B237D4B2B0C5C3E0015DED0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3B237D4D2B0C5C3F0015DED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B237D502B0C5C3F0015DED0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B9A848F2B15B07F001E3FC3 /* Twitta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9A84922B15B07F001E3FC3 /* TwittaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittaApp.swift; sourceTree = "<group>"; };
+		3B9A84942B15B07F001E3FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B9A84962B15B07F001E3FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B9A84992B15B07F001E3FC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B9A84A02B15B0AC001E3FC3 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B237D432B0C5C3E0015DED0 /* Frameworks */ = {
+		3B9A848C2B15B07F001E3FC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B237D3D2B0C5C3E0015DED0 = {
+		3B9A84862B15B07F001E3FC3 = {
 			isa = PBXGroup;
 			children = (
-				3B237D482B0C5C3E0015DED0 /* Twitter Recreation */,
-				3B237D472B0C5C3E0015DED0 /* Products */,
+				3B9A84912B15B07F001E3FC3 /* Twitta */,
+				3B9A84902B15B07F001E3FC3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B237D472B0C5C3E0015DED0 /* Products */ = {
+		3B9A84902B15B07F001E3FC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B237D462B0C5C3E0015DED0 /* Twitter Recreation.app */,
+				3B9A848F2B15B07F001E3FC3 /* Twitta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B237D482B0C5C3E0015DED0 /* Twitter Recreation */ = {
+		3B9A84912B15B07F001E3FC3 /* Twitta */ = {
 			isa = PBXGroup;
 			children = (
-				3B237D492B0C5C3E0015DED0 /* Twitter_RecreationApp.swift */,
-				3B237D4B2B0C5C3E0015DED0 /* ContentView.swift */,
-				3B237D4D2B0C5C3F0015DED0 /* Assets.xcassets */,
-				3B237D4F2B0C5C3F0015DED0 /* Preview Content */,
+				3B9A84922B15B07F001E3FC3 /* TwittaApp.swift */,
+				3B9A84942B15B07F001E3FC3 /* ContentView.swift */,
+				3B9A84A02B15B0AC001E3FC3 /* Tweet.swift */,
+				3B9A84962B15B07F001E3FC3 /* Assets.xcassets */,
+				3B9A84982B15B07F001E3FC3 /* Preview Content */,
 			);
-			path = "Twitter Recreation";
+			path = Twitta;
 			sourceTree = "<group>";
 		};
-		3B237D4F2B0C5C3F0015DED0 /* Preview Content */ = {
+		3B9A84982B15B07F001E3FC3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3B237D502B0C5C3F0015DED0 /* Preview Assets.xcassets */,
+				3B9A84992B15B07F001E3FC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +73,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B237D452B0C5C3E0015DED0 /* Twitter Recreation */ = {
+		3B9A848E2B15B07F001E3FC3 /* Twitta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B237D542B0C5C3F0015DED0 /* Build configuration list for PBXNativeTarget "Twitter Recreation" */;
+			buildConfigurationList = 3B9A849D2B15B07F001E3FC3 /* Build configuration list for PBXNativeTarget "Twitta" */;
 			buildPhases = (
-				3B237D422B0C5C3E0015DED0 /* Sources */,
-				3B237D432B0C5C3E0015DED0 /* Frameworks */,
-				3B237D442B0C5C3E0015DED0 /* Resources */,
+				3B9A848B2B15B07F001E3FC3 /* Sources */,
+				3B9A848C2B15B07F001E3FC3 /* Frameworks */,
+				3B9A848D2B15B07F001E3FC3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Twitter Recreation";
-			productName = "Twitter Recreation";
-			productReference = 3B237D462B0C5C3E0015DED0 /* Twitter Recreation.app */;
+			name = Twitta;
+			productName = Twitta;
+			productReference = 3B9A848F2B15B07F001E3FC3 /* Twitta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B237D3E2B0C5C3E0015DED0 /* Project object */ = {
+		3B9A84872B15B07F001E3FC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					3B237D452B0C5C3E0015DED0 = {
+					3B9A848E2B15B07F001E3FC3 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 3B237D412B0C5C3E0015DED0 /* Build configuration list for PBXProject "Twitter Recreation" */;
+			buildConfigurationList = 3B9A848A2B15B07F001E3FC3 /* Build configuration list for PBXProject "Twitta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 3B237D3D2B0C5C3E0015DED0;
-			productRefGroup = 3B237D472B0C5C3E0015DED0 /* Products */;
+			mainGroup = 3B9A84862B15B07F001E3FC3;
+			productRefGroup = 3B9A84902B15B07F001E3FC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B237D452B0C5C3E0015DED0 /* Twitter Recreation */,
+				3B9A848E2B15B07F001E3FC3 /* Twitta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B237D442B0C5C3E0015DED0 /* Resources */ = {
+		3B9A848D2B15B07F001E3FC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B237D512B0C5C3F0015DED0 /* Preview Assets.xcassets in Resources */,
-				3B237D4E2B0C5C3F0015DED0 /* Assets.xcassets in Resources */,
+				3B9A849A2B15B07F001E3FC3 /* Preview Assets.xcassets in Resources */,
+				3B9A84972B15B07F001E3FC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B237D422B0C5C3E0015DED0 /* Sources */ = {
+		3B9A848B2B15B07F001E3FC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B237D4C2B0C5C3E0015DED0 /* ContentView.swift in Sources */,
-				3B237D4A2B0C5C3E0015DED0 /* Twitter_RecreationApp.swift in Sources */,
+				3B9A84A12B15B0AC001E3FC3 /* Tweet.swift in Sources */,
+				3B9A84952B15B07F001E3FC3 /* ContentView.swift in Sources */,
+				3B9A84932B15B07F001E3FC3 /* TwittaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3B237D522B0C5C3F0015DED0 /* Debug */ = {
+		3B9A849B2B15B07F001E3FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		3B237D532B0C5C3F0015DED0 /* Release */ = {
+		3B9A849C2B15B07F001E3FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,14 +268,14 @@
 			};
 			name = Release;
 		};
-		3B237D552B0C5C3F0015DED0 /* Debug */ = {
+		3B9A849E2B15B07F001E3FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Twitter Recreation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Twitta/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,7 +288,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mkdrabik.Twitter-Recreation";
+				PRODUCT_BUNDLE_IDENTIFIER = mkdrabik.Twitta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -292,14 +296,14 @@
 			};
 			name = Debug;
 		};
-		3B237D562B0C5C3F0015DED0 /* Release */ = {
+		3B9A849F2B15B07F001E3FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Twitter Recreation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Twitta/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,7 +316,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mkdrabik.Twitter-Recreation";
+				PRODUCT_BUNDLE_IDENTIFIER = mkdrabik.Twitta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,25 +327,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B237D412B0C5C3E0015DED0 /* Build configuration list for PBXProject "Twitter Recreation" */ = {
+		3B9A848A2B15B07F001E3FC3 /* Build configuration list for PBXProject "Twitta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B237D522B0C5C3F0015DED0 /* Debug */,
-				3B237D532B0C5C3F0015DED0 /* Release */,
+				3B9A849B2B15B07F001E3FC3 /* Debug */,
+				3B9A849C2B15B07F001E3FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B237D542B0C5C3F0015DED0 /* Build configuration list for PBXNativeTarget "Twitter Recreation" */ = {
+		3B9A849D2B15B07F001E3FC3 /* Build configuration list for PBXNativeTarget "Twitta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B237D552B0C5C3F0015DED0 /* Debug */,
-				3B237D562B0C5C3F0015DED0 /* Release */,
+				3B9A849E2B15B07F001E3FC3 /* Debug */,
+				3B9A849F2B15B07F001E3FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B237D3E2B0C5C3E0015DED0 /* Project object */;
+	rootObject = 3B9A84872B15B07F001E3FC3 /* Project object */;
 }
