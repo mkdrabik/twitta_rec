@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Tweet: Identifiable{
     let id = UUID()
@@ -13,7 +14,22 @@ struct Tweet: Identifiable{
     let authorUsername: String
     let timestampText: String
     let text: String
-    let numberOfReplies: Int
-    let numberOfRetweets: Int
-    let numberOfLikes: Int
+    var numberOfReplies: Int
+    var numberOfRetweets: Int
+    var numberOfLikes: Int
+    var pfp: String
+}
+
+extension Tweet{
+    static var example: Tweet{
+        Tweet(authorName: "Mason Drabik",
+              authorUsername: "m_drabik",
+              timestampText: "4h",
+              text: "Finally.",
+              numberOfReplies: 2,
+              numberOfRetweets: 0,
+              numberOfLikes: 0,
+              pfp: "mason"
+        )
+    }
 }

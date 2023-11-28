@@ -12,66 +12,68 @@ extension Color{
 }
 
 struct ContentView: View {
-    private let tweets: [Tweet] = [
+    @State var tweets: [Tweet] = [
           Tweet(authorName: "Mason Drabik",
                 authorUsername: "m_drabik",
                 timestampText: "4h",
-                text: "Finally.",
+                text: "Finally done.",
                 numberOfReplies: 2,
                 numberOfRetweets: 0,
-                numberOfLikes: 0),
-          Tweet(authorName: "Jack",
-                authorUsername: "jack",
+                numberOfLikes: 0, pfp: "mason"),
+          Tweet(authorName: "Elon Musk",
+                authorUsername: "em",
                 timestampText: "15h",
-                text: "just setting up my twttr",
+                text: "I will own this app soon...",
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
-                numberOfLikes: 450),
+                numberOfLikes: 450, pfp: "elon"),
           Tweet(authorName: "Donald J. Trump",
                 authorUsername: "realDonaldTrump",
                 timestampText: "6h",
-                text: "Despite the negative press covfefe",
+                text: "LOL",
                 numberOfReplies: 2890,
                 numberOfRetweets: 4565,
-                numberOfLikes: 896),
-          Tweet(authorName: "Jack",
-                authorUsername: "jack",
+                numberOfLikes: 896, pfp: "don"),
+          Tweet(authorName: "Mason Drabik",
+                authorUsername: "m_drabik",
                 timestampText: "15h",
-                text: "this is a tweet with a lot of text because I need to test multi-line tweets in my new SwiftUI twitter app :)",
+                text: "J Chillin whats up twitta",
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
-                numberOfLikes: 450),
-          Tweet(authorName: "Barack Obama",
-                authorUsername: "BarackObama",
+                numberOfLikes: 450, pfp: "mason"),
+          Tweet(authorName: "Lebron James",
+                authorUsername: "lbj",
                 timestampText: "12h",
-                text: "No one is born hating another person because of the color of his skin or his background or his religion...",
+                text: "Just a kid from Akron, man all glory to God!",
                 numberOfReplies: 558,
                 numberOfRetweets: 3568,
-                numberOfLikes: 4350),
-          Tweet(authorName: "Jack",
-                authorUsername: "jack",
+                numberOfLikes: 4350, pfp: "lebron"),
+          Tweet(authorName: "Dave Portnoy",
+                authorUsername: "dp",
                 timestampText: "15h",
-                text: "this is a tweet with a lot of text because I need to test multi-line tweets in my new SwiftUI twitter app :)",
+                text: "Something stupid about Boston sports",
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
-                numberOfLikes: 450),
-          Tweet(authorName: "Jack",
-                authorUsername: "jack",
+                numberOfLikes: 450, pfp: "dp"),
+          Tweet(authorName: "Donald Trump",
+                authorUsername: "dp",
                 timestampText: "15h",
-                text: "this is a tweet with a lot of text because I need to test multi-line tweets in my new SwiftUI twitter app :)",
+                text: "2016 Cavaliers best team in NBA history. There I said it.",
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
-                numberOfLikes: 450),
+                numberOfLikes: 450, pfp: "don"),
+
         ]
 
     @State private var selectedTab = 0
+    @State private var cs: ColorScheme = .light
     var body: some View {
         ZStack{
             TabView(selection: $selectedTab){
-                FeedView(tweets: tweets).tabItem {
+                FeedView(tweets: tweets, cs: $cs).tabItem {
                     Image(systemName: "house")
                 }.tag(0)
-                Text("Tab Content 1").tabItem {
+                SearchView(cs: $cs).tabItem {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
                 Text("Tab Content 1").tabItem {
@@ -80,7 +82,9 @@ struct ContentView: View {
                 Text("Tab Content 1").tabItem {
                     Image(systemName: "envelope")
                 }.tag(3)
-            }.accentColor(.twitterBlue)
+            }
+            .accentColor(.twitterBlue)
+            .environment(\.colorScheme, cs)
             
             VStack{
                 Spacer()
@@ -110,96 +114,8 @@ struct NewTweetButton: View {
 }
 
 
-struct FeedView: View{
-    let tweets: [Tweet]
-    
-    var body: some View{
-        NavigationView{
-            List(tweets){tweet in
-                TweetView(tweet: tweet)
-            }
-            .listStyle(PlainListStyle())
-            .navigationBarTitle("Twitter", displayMode: .inline)
-            .navigationBarItems(
-                leading:
-                    Button(action:{}){
-                        Image(systemName: "person.crop.circle.fill")
-                            .foregroundColor(.twitterBlue)
-                    }, 
-                    trailing: Button(action: {}){
-                        Image(systemName: "moon.stars")
-                            .foregroundColor(.twitterBlue)
-                    })
-        }
-    }
-}
-
-struct TweetView: View{
-    let tweet: Tweet
-    
-    var body: some View{
-        HStack(alignment: .top){
-            Image(systemName: "person.crop.circle.fill")
-                .font(.system(size:55))
-                .padding(.top)
-                .padding(.trailing, 5)
-                .foregroundColor(.twitterBlue)
-            VStack(alignment: .leading){
-                HStack{
-                    Text(tweet.authorName)
-                        .bold()
-                        .lineLimit(1)
-                    Text("@\(tweet.authorUsername) • \(tweet.timestampText)")
-                        .lineLimit(1)
-                        .truncationMode(.middle)
-                        .foregroundColor(.gray)
-                }
-                .padding(.top, 5)
-                
-                Text(tweet.text)
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.leading)
-                
-                TweetActionsView(tweet: tweet)
-                    .foregroundColor(.gray)
-                    .padding([.bottom, .top], 10)
-                    .padding(.trailing, 10)
-            }
-        }
-    }
-}
-
-struct TweetActionsView: View{
-    let tweet: Tweet
-    
-    var body: some View{
-        HStack{
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                Image(systemName: "message")
-            }
-            Text(tweet.numberOfReplies > 0 ? "\(tweet.numberOfReplies)" : "")
-            Spacer()
-            
-            Button(action:{}){
-                Image(systemName: "arrow.2.squarepath")
-            }
-            Text(tweet.numberOfRetweets > 0 ? "\(tweet.numberOfRetweets)" : "")
-            Spacer()
-            
-            Button(action:{}){
-                Image(systemName: "heart")
-            }
-            Text(tweet.numberOfLikes > 0 ? "\(tweet.numberOfLikes)" : "")
-            Spacer()
-            
-            Button(action: {}){
-                Image(systemName: "square.and.arrow.up")
-            }
-        }
-    }
-}
-
 
 #Preview {
     ContentView()
 }
+
