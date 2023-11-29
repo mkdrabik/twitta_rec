@@ -1,5 +1,5 @@
 //
-//  DMView.swift
+//  NotificationsView.swift
 //  Twitta
 //
 //  Created by Mason Drabik on 11/28/23.
@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct DMView: View {
+struct NotificationsView: View {
     @State var pushed = false
+    let notifications: [Tweet]
     @Binding var cs: ColorScheme
     
     var body: some View {
         NavigationView{
-            Text("HI")
-                .navigationBarTitle("Twitter", displayMode: .inline)
+            List(notifications){tweet in
+                NotificationView(tweet: tweet)
+            }
+            .listStyle(PlainListStyle())
+            .navigationBarTitle("Notifications", displayMode: .inline)
                 .navigationBarItems(
                     leading:
                         Button(action:{}){
@@ -36,6 +40,6 @@ struct DMView: View {
     }
 }
 
-#Preview {
-    DMView(cs: .constant(.dark))
+#Preview{
+    NotificationsView(notifications: [.example, .example], cs: .constant(.dark))
 }

@@ -13,7 +13,7 @@ struct Tweet: Identifiable{
     let authorName: String
     let authorUsername: String
     let timestampText: String
-    let text: String
+    var text: String
     var numberOfReplies: Int
     var numberOfRetweets: Int
     var numberOfLikes: Int

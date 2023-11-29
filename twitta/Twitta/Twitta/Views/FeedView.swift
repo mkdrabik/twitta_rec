@@ -11,6 +11,7 @@ struct FeedView: View{
     let tweets: [Tweet]
     @State var pushed = false
     @Binding var cs: ColorScheme
+    @Binding var settings: Bool
     
     var body: some View{
         NavigationView{
@@ -21,9 +22,13 @@ struct FeedView: View{
             .navigationBarTitle("Twitter", displayMode: .inline)
             .navigationBarItems(
                 leading:
-                    Button(action:{}){
-                        Image(systemName: "person.crop.circle.fill")
-                            .foregroundColor(.twitterBlue)
+                    Button(action:{
+                        settings.toggle()
+                    }){
+                        Image("mason")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
                     },
                     trailing: Button(action: {
                         pushed.toggle()
@@ -41,5 +46,5 @@ struct FeedView: View{
 }
 
 #Preview {
-    FeedView(tweets: [.example], pushed: false, cs: .constant(.light))
+    FeedView(tweets: [.example], pushed: false, cs: .constant(.light), settings: .constant(false))
 }

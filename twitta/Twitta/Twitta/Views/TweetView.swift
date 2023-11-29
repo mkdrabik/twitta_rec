@@ -31,7 +31,6 @@ struct TweetView: View{
                         .foregroundColor(.gray)
                 }
                 .padding(.top, 5)
-                
                 Text(tweet.text)
                     .lineLimit(nil)
                     .multilineTextAlignment(.leading)

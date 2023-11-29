@@ -13,13 +13,13 @@ extension Color{
 
 struct ContentView: View {
     @State var tweets: [Tweet] = [
-          Tweet(authorName: "Mason Drabik",
-                authorUsername: "m_drabik",
+          Tweet(authorName: "Elon Musk",
+                authorUsername: "em",
                 timestampText: "4h",
-                text: "Finally done. Maybe",
+                text: "Finally done with the CyberTruck.",
                 numberOfReplies: 2,
-                numberOfRetweets: 0,
-                numberOfLikes: 0, pfp: "mason"),
+                numberOfRetweets: 2000,
+                numberOfLikes: 50000, pfp: "elon"),
           Tweet(authorName: "Elon Musk",
                 authorUsername: "em",
                 timestampText: "15h",
@@ -34,13 +34,13 @@ struct ContentView: View {
                 numberOfReplies: 2890,
                 numberOfRetweets: 4565,
                 numberOfLikes: 896, pfp: "don"),
-          Tweet(authorName: "Mason Drabik",
-                authorUsername: "m_drabik",
+          Tweet(authorName: "Dave Portnoy",
+                authorUsername: "dp",
                 timestampText: "15h",
                 text: "J Chillin whats up twitta",
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
-                numberOfLikes: 450, pfp: "mason"),
+                numberOfLikes: 450, pfp: "dp"),
           Tweet(authorName: "Lebron James",
                 authorUsername: "lbj",
                 timestampText: "12h",
@@ -62,21 +62,52 @@ struct ContentView: View {
                 numberOfReplies: 589,
                 numberOfRetweets: 368,
                 numberOfLikes: 450, pfp: "don"),
+          Tweet(authorName: "Lebron James",
+                authorUsername: "lbj",
+                timestampText: "12h",
+                text: "I agree with Donald.",
+                numberOfReplies: 558,
+                numberOfRetweets: 3568,
+                numberOfLikes: 4350, pfp: "lebron"),
+          Tweet(authorName: "Donald Trump",
+                authorUsername: "dp",
+                timestampText: "15h",
+                text: "Michael Jordan > Lebron James",
+                numberOfReplies: 589,
+                numberOfRetweets: 368,
+                numberOfLikes: 450, pfp: "don"),
+          Tweet(authorName: "Lebron James",
+                authorUsername: "lbj",
+                timestampText: "12h",
+                text: "NVM.",
+                numberOfReplies: 558,
+                numberOfRetweets: 3568,
+                numberOfLikes: 4350, pfp: "lebron"),
+          Tweet(authorName: "Elon Musk",
+                authorUsername: "em",
+                timestampText: "15h",
+                text: "Aliens are the best basketball players.",
+                numberOfReplies: 589,
+                numberOfRetweets: 368,
+                numberOfLikes: 450, pfp: "elon")
 
         ]
-
+    
     @State private var selectedTab = 0
     @State private var cs: ColorScheme = .light
+    @State private var plus = false
+    @State private var settings: Bool = false
+    
     var body: some View {
         ZStack{
             TabView(selection: $selectedTab){
-                FeedView(tweets: tweets, cs: $cs).tabItem {
+                FeedView(tweets: tweets, cs: $cs, settings: $settings).tabItem {
                     Image(systemName: "house")
                 }.tag(0)
                 SearchView(cs: $cs).tabItem {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
-                NotificationsView(cs: $cs).tabItem {
+                NotificationsView(notifications: tweets, cs: $cs).tabItem {
                     Image(systemName: "bell")
                 }.tag(2)
                 DMView(cs: $cs).tabItem {
@@ -85,12 +116,18 @@ struct ContentView: View {
             }
             .accentColor(.twitterBlue)
             .environment(\.colorScheme, cs)
+            .sheet(isPresented: $plus){
+                AddTweetView(tweets: $tweets, plus: $plus)
+            }
+            .sheet(isPresented: $settings){
+                SettingsView(settings: $settings)
+            }
             
             VStack{
                 Spacer()
                 HStack{
                     Spacer()
-                    NewTweetButton()
+                    NewTweetButton(plus: $plus)
                         .padding(.bottom, 65)
                         .padding(.trailing)
                 }
@@ -100,8 +137,12 @@ struct ContentView: View {
 }
 
 struct NewTweetButton: View {
+    @Binding var plus: Bool
+    
     var body: some View {
-        Button(action:{}){
+        Button(action:{
+            plus = true
+        }){
             Image(systemName: "pencil")
                 .font(.largeTitle)
                 .foregroundColor(.white)

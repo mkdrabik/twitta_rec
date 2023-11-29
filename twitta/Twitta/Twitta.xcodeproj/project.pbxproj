@@ -17,6 +17,9 @@
 		3BF6EF232B166FE4006E83E5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF222B166FE4006E83E5 /* FeedView.swift */; };
 		3BF6EF252B169AD7006E83E5 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF242B169AD7006E83E5 /* NotificationsView.swift */; };
 		3BF6EF272B169B8D006E83E5 /* DMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF262B169B8D006E83E5 /* DMView.swift */; };
+		3BF6EF2A2B16A640006E83E5 /* AddTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF292B16A640006E83E5 /* AddTweetView.swift */; };
+		3BF6EF2C2B16CD52006E83E5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF2B2B16CD52006E83E5 /* NotificationView.swift */; };
+		3BF6EF2E2B16DB1D006E83E5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6EF2D2B16DB1D006E83E5 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		3BF6EF222B166FE4006E83E5 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		3BF6EF242B169AD7006E83E5 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		3BF6EF262B169B8D006E83E5 /* DMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMView.swift; sourceTree = "<group>"; };
+		3BF6EF292B16A640006E83E5 /* AddTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetView.swift; sourceTree = "<group>"; };
+		3BF6EF2B2B16CD52006E83E5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		3BF6EF2D2B16DB1D006E83E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +69,11 @@
 		3B9A84912B15B07F001E3FC3 /* Twitta */ = {
 			isa = PBXGroup;
 			children = (
+				3BF6EF282B16A5D4006E83E5 /* Views */,
 				3B9A84922B15B07F001E3FC3 /* TwittaApp.swift */,
-				3B9A84942B15B07F001E3FC3 /* ContentView.swift */,
 				3B9A84A02B15B0AC001E3FC3 /* Tweet.swift */,
-				3BF6EF1E2B16615D006E83E5 /* TweetView.swift */,
-				3BF6EF202B166ECD006E83E5 /* SearchView.swift */,
-				3BF6EF222B166FE4006E83E5 /* FeedView.swift */,
-				3BF6EF242B169AD7006E83E5 /* NotificationsView.swift */,
 				3B9A84962B15B07F001E3FC3 /* Assets.xcassets */,
 				3B9A84982B15B07F001E3FC3 /* Preview Content */,
-				3BF6EF262B169B8D006E83E5 /* DMView.swift */,
 			);
 			path = Twitta;
 			sourceTree = "<group>";
@@ -83,6 +84,22 @@
 				3B9A84992B15B07F001E3FC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BF6EF282B16A5D4006E83E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BF6EF1E2B16615D006E83E5 /* TweetView.swift */,
+				3BF6EF222B166FE4006E83E5 /* FeedView.swift */,
+				3BF6EF242B169AD7006E83E5 /* NotificationsView.swift */,
+				3BF6EF202B166ECD006E83E5 /* SearchView.swift */,
+				3BF6EF262B169B8D006E83E5 /* DMView.swift */,
+				3B9A84942B15B07F001E3FC3 /* ContentView.swift */,
+				3BF6EF292B16A640006E83E5 /* AddTweetView.swift */,
+				3BF6EF2B2B16CD52006E83E5 /* NotificationView.swift */,
+				3BF6EF2D2B16DB1D006E83E5 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF6EF212B166ECD006E83E5 /* SearchView.swift in Sources */,
+				3BF6EF2A2B16A640006E83E5 /* AddTweetView.swift in Sources */,
 				3B9A84A12B15B0AC001E3FC3 /* Tweet.swift in Sources */,
 				3B9A84952B15B07F001E3FC3 /* ContentView.swift in Sources */,
 				3BF6EF272B169B8D006E83E5 /* DMView.swift in Sources */,
@@ -163,6 +181,8 @@
 				3BF6EF232B166FE4006E83E5 /* FeedView.swift in Sources */,
 				3B9A84932B15B07F001E3FC3 /* TwittaApp.swift in Sources */,
 				3BF6EF252B169AD7006E83E5 /* NotificationsView.swift in Sources */,
+				3BF6EF2C2B16CD52006E83E5 /* NotificationView.swift in Sources */,
+				3BF6EF2E2B16DB1D006E83E5 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
