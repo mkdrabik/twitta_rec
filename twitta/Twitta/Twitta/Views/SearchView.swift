@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State var pushed = false
     @Binding var cs: ColorScheme
     @State var txt: String = ""
+    @Binding var pushed: Bool
     
     var body: some View {
         NavigationView{
@@ -24,8 +24,10 @@ struct SearchView: View {
                 .navigationBarItems(
                         leading:
                             Button(action:{}){
-                                    Image(systemName: "person.crop.circle.fill")
-                                        .foregroundColor(.twitterBlue)
+                                Image("mason")
+                                    .resizable()
+                                    .frame(width: 32, height: 32)
+                                    .clipShape(Circle())
                                 },
                                 trailing: Button(action: {
                                     pushed.toggle()
@@ -43,5 +45,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(cs: .constant(.dark))
+    SearchView(cs: .constant(.dark), pushed: .constant(true))
 }

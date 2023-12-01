@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FeedView: View{
     let tweets: [Tweet]
-    @State var pushed = false
     @Binding var cs: ColorScheme
     @Binding var settings: Bool
+    @Binding var pushed: Bool
     
     var body: some View{
         NavigationView{
@@ -46,5 +46,5 @@ struct FeedView: View{
 }
 
 #Preview {
-    FeedView(tweets: [.example], pushed: false, cs: .constant(.light), settings: .constant(false))
+    FeedView(tweets: [.example], cs: .constant(.light), settings: .constant(false), pushed: .constant(true))
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct NotificationsView: View {
-    @State var pushed = false
     let notifications: [Tweet]
     @Binding var cs: ColorScheme
+    @Binding var pushed: Bool
     
     var body: some View {
         NavigationView{
@@ -22,8 +22,10 @@ struct NotificationsView: View {
                 .navigationBarItems(
                     leading:
                         Button(action:{}){
-                            Image(systemName: "person.crop.circle.fill")
-                                .foregroundColor(.twitterBlue)
+                            Image("mason")
+                                .resizable()
+                                .frame(width: 32, height: 32)
+                                .clipShape(Circle())
                         },
                     trailing: Button(action: {
                         pushed.toggle()
@@ -41,5 +43,5 @@ struct NotificationsView: View {
 }
 
 #Preview{
-    NotificationsView(notifications: [.example, .example], cs: .constant(.dark))
+    NotificationsView(notifications: [.example, .example], cs: .constant(.dark), pushed: .constant(true))
 }

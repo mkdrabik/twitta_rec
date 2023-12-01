@@ -95,22 +95,23 @@ struct ContentView: View {
     
     @State private var selectedTab = 0
     @State private var cs: ColorScheme = .light
+    @State private var pushed: Bool = false
     @State private var plus = false
     @State private var settings: Bool = false
     
     var body: some View {
         ZStack{
             TabView(selection: $selectedTab){
-                FeedView(tweets: tweets, cs: $cs, settings: $settings).tabItem {
+                FeedView(tweets: tweets, cs: $cs, settings: $settings, pushed: $pushed).tabItem {
                     Image(systemName: "house")
                 }.tag(0)
-                SearchView(cs: $cs).tabItem {
+                SearchView(cs: $cs, pushed: $pushed).tabItem {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
-                NotificationsView(notifications: tweets, cs: $cs).tabItem {
+                NotificationsView(notifications: tweets, cs: $cs, pushed: $pushed).tabItem {
                     Image(systemName: "bell")
                 }.tag(2)
-                DMView(cs: $cs).tabItem {
+                DMView(cs: $cs, pushed: $pushed).tabItem {
                     Image(systemName: "envelope")
                 }.tag(3)
             }
